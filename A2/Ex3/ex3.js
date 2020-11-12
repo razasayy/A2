@@ -1,39 +1,53 @@
-document.getElementById("calculate").addEventListener("click", convertor);
+document.getElementById("calculate").addEventListener("click", counter);
+document.getElementById("reset").addEventListener("click", reset);
 
-function convertor(){
+var positives = 0;
+negatives = 0
+updateNumbers("reset");
+
+function reset(){
+    document.getElementById("calculate").style.visibility= "visible";
+    positives,negatives = 0;
+    updateNumbers("reset")
+}
+
+function counter(){
 
     var a = document.getElementById("num1").value
     var message = "";
 
     //check if inputs are numbers that between 1 and 100 inclusive
-    if (isNaN(a) || a < 1 || a > 100){
-        message += "Invalid entry for grade. Please enter a number between 1 and 100\n"
+    if (isNaN(a)){
+        message += "Invalid entry. Please enter a number \n"
 
     } if (message != ""){
         alert(message);
     }
 
     else{
-        var letter;
-        switch(Math.trunc(a/10)){
-            case 10:
-            case 9:
-            case 8:
-                letter = "A";
-                break;
-            case 7:
-                letter = "B";
-                break;
-            case 6:
-                letter = "C";
-                break;
-            case 5:
-                letter = "D";
-                break;
-            default:
-                letter = "F";
-                break;
-        } 
-        document.getElementById("result").innerText = letter;
+        //make sure a is not empty 
+        if(a == "0" && a != ""){
+            document.getElementById("calculate").style.visibility= "hidden";
+        }
+        else if(a < 0){
+            negatives += 1;
+            updateNumbers("negative");
+        }
+        else if(a>0){
+            positives += 1;
+            updateNumbers("positive");
+        }
     }
+}
+
+function updateNumbers(a){
+    if(a =="positive"){
+        document.getElementById("positives").innerText = positives;
+    } else if(a == "negative"){
+        document.getElementById("negatives").innerText = negatives;
+    } else if(a == "reset"){
+        document.getElementById("positives").innerText = positives;
+        document.getElementById("negatives").innerText = negatives;
+    }
+    document.getElementById("total").innerText = positives + negatives;
 }
