@@ -16,8 +16,8 @@ function counter(){
     var a = document.getElementById("num1").value
     var message = "";
 
-    //check if inputs are numbers that between 1 and 100 inclusive
-    if (isNaN(a)){
+    //check if input is number
+    if (a == "" || isNaN(a)){
         message += "Invalid entry. Please enter a number \n"
 
     } if (message != ""){
@@ -25,8 +25,8 @@ function counter(){
     }
 
     else{
-        //make sure a is not empty 
-        if(a == "0" && a != ""){
+         
+        if(a == "0"){
             document.getElementById("calculate").style.visibility= "hidden";
         }
         else if(a < 0){
