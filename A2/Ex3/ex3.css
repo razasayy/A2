@@ -10,3 +10,8 @@ label{
 button{
     margin: 10px auto 0 auto;
 }
+
+body{
+    background-color: gray;
+    margin: auto;
+}
