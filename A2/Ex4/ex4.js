@@ -1,3 +1,6 @@
+//listener
+
+
 function Palindrome(a){
     //solved by taking advantage of js dynamic typing
     //check a is a positive number
