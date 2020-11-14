@@ -15,21 +15,37 @@ function convertor(){
 
     else{
         var letter;
-        switch(Math.trunc(a/10)){
-            case 10:
-            case 9:
-            case 8:
+        switch(Math.trunc((a*2)/10)){
+            case 20:
+            case 19:
+            case 18:
+                letter = "A+";
+                break;
+            case 17:
+            case 16:
                 letter = "A";
                 break;
-            case 7:
+            case 15:
+                letter = "B+";
+                break;
+            case 14:
                 letter = "B";
                 break;
-            case 6:
+            case 13:
+                letter = "C+";
+                break;
+            case 12:
                 letter = "C";
                 break;
-            case 5:
+            case 11:
+                letter = "D+";
+                break;
+            case 10:
                 letter = "D";
                 break;
+            case 9:
+            case 8:
+                letter = "E";
             default:
                 letter = "F";
                 break;
