@@ -1,3 +1,7 @@
+document.getElementById("calculate").addEventListener("click", convertor);
+
+
+
 function Palindrome(a){
     //solved by taking advantage of js dynamic typing
     //check a is a positive number
