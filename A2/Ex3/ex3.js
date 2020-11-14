@@ -7,7 +7,8 @@ updateNumbers("reset");
 
 function reset(){
     document.getElementById("calculate").style.visibility= "visible";
-    positives,negatives = 0;
+    positives = 0;
+    negatives = 0;
     updateNumbers("reset")
 }
 
