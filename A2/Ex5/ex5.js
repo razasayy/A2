@@ -10,12 +10,15 @@ function Pattern(){
     for(i=0; i <= num1; i++) {
        
       for(j=1; j<=i; j++) {
-         document.write("XX "+ "");
+          
+         document.getElementById("result").innerHTML+="XX  ";
+
+     }
+         document.getElementById("result").innerHTML+="<br/>";
     }
-    document.write("<br/>");
-}
 
 
-document.getElementById("result").innerHTML = num1;
+
+document.getElementById("number").innerHTML = num1;
 
 }    
