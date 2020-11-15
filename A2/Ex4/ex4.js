@@ -1,5 +1,6 @@
 document.getElementById("calculate").addEventListener("click", convertor);
 
+//listener
 
 
 function Palindrome(a){
