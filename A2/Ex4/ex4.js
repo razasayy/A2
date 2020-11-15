@@ -3,12 +3,12 @@ document.getElementById("calculate").addEventListener("click", connector);
 
 function connector(){
 
-    var a = document.getElementById("num1").value
+    var a = document.getElementById("num1").value;
+    
     if(isPalindrome(a)){
         document.getElementById("result").innerHTML = "yes";
         
     }
-
     else{
         document.getElementById("result").innerHTML="no";
     }
@@ -25,8 +25,8 @@ function isPalindrome(a){
 
     //treat number as string and see if its a palindrome
     var stop = Math.trunc(a.length/2);
-    for (let i = 0; i <= stop;i++){
-        if (a[i] != a[a.length - i]){
+    for (let i = 0; i <= stop; i++){
+        if (a[i] != a[a.length - 1 - i]){
             return false;
         }
     }
