@@ -1,9 +1,21 @@
-document.getElementById("calculate").addEventListener("click", convertor);
-
-//listener
+document.getElementById("calculate").addEventListener("click", connector);
 
 
-function Palindrome(a){
+function connector(){
+
+    var a = document.getElementById("num1").value
+    if(isPalindrome(a)){
+        document.getElementById("result").innerHTML = "yes";
+        
+    }
+
+    else{
+        document.getElementById("result").innerHTML="no";
+    }
+
+}
+
+function isPalindrome(a){
     //solved by taking advantage of js dynamic typing
     //check a is a positive number
     if (a == "" || isNaN(a)){
